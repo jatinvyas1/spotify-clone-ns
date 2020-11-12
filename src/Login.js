@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{useEffect,useState}from 'react'
+import {loginURL,getToken} from './spotify';
 import "./Login.css"
 function Login() {
     return (
         <div className="login">
-            <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png" alt="logo"/>
-            <a>Login with Spotify</a>
+            <img src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"/>
+            <a href = {loginURL}>Login with Spotify</a>
         </div>
     )
 }
