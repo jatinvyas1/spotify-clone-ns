@@ -10,7 +10,7 @@ const spotify = new SpotifyWebAPI();
 
 export default function App() {
   const [token,setToken] = useState(null);
-  const [{user},dispath] = useStateProviderValue();
+  const [{user},dispatch] = useStateProviderValue();
 
     useEffect(() => {
         const hash = getToken();
@@ -22,13 +22,14 @@ export default function App() {
             //To get User Acc
             spotify.getMe().then(user=>{
               console.log(user);
-              dispatchEvent({
+              dispatch({
                 type:'SET_USER',
                 user:user
               })
             })
         }
        }, [])
+       console.log(user);
   return (
     <div className="App">
     {token?<Player />:<Login/>}
