@@ -1,5 +1,6 @@
-import React,{useEffect,useState}from 'react'
-import {loginURL,getToken} from './spotify';
+import React from 'react'
+import {loginURL} from './spotify';
+
 import "./Login.css"
 function Login() {
     return (
